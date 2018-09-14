@@ -17,20 +17,20 @@
                 <div class="menuWindow">
                     <ul class="p1">
                         <li class="s1">
-                            <a href="#url">
+                            <a href="javascript:;">
                                 <img src="./images/menu.png" alt="">
                             </a>
                             <ul class="p2">
-                                <li class="s2"><a href="#"><span>实时监控 &gt;</span></a></li>
-                                <li class="s2"><a href="#url"><span>报警管理 &gt;</span></a>
+                                <li class="s2"><a href="javascript:;"><span style="opacity: 1">实时监控 &gt;</span></a></li>
+                                <li class="s2"><a href="javascript:;"><span>报警管理 &gt;</span></a>
                                 </li>
-                                <li class="s2"><a href="#url"><span>行驶轨道 &gt;</span></a>
+                                <li class="s2"><a href="javascript:;"><span>行驶轨道 &gt;</span></a>
                                 </li>
-                                <li class="s2"><a href="#url"><span>电子围栏 &gt;</span></a>
+                                <li class="s2"><a href="javascript:;"><span>电子围栏 &gt;</span></a>
                                 </li>
-                                <li class="s2"><a href="#url"><span>报表分析 &gt;</span></a>
+                                <li class="s2"><a href="javascript:;"><span>报表分析 &gt;</span></a>
                                 </li>
-                                <li class="s2 b6"><a href="#url"><span>车辆管理 &gt;</span></a>
+                                <li class="s2 "><a href="javascript:;"><span>车辆管理 &gt;</span></a>
                                 </li>
                             </ul>
                         </li>
@@ -39,9 +39,20 @@
             </div>
         </div>
     </div>
-
+    <canvas id="mc" width="300" height="200">
+    </canvas>
 
 </body>
 <script src="./js/jquery-1.11.3.min.js"></script>
 <script src="./js/index.js"></script>
+<script>
+    var canvas = document.getElementById("mc");
+    var ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(100, 100, 50, 0, 2 * Math.PI / 24, false);
+    ctx.lineTo(100, 100);
+    ctx.fillStyle = "rgba(200,0,10,0.5)";
+    ctx.fill();
+    ctx.closePath();
+</script>
 </html>

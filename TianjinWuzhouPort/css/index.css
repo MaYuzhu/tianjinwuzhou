@@ -49,8 +49,20 @@ html,body{
     width: 59px;
     height: 59px;
 }
-.menuHolder ul {padding:0; margin:0; list-style:none; position:absolute; left:0; top:0; width:0; height:0;}
-.menuHolder ul li {border-radius:0 0 300px 0; width:0; height:0;}
+.menuHolder ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+    position:absolute;
+    left:0; top:0;
+    width:0;
+    height:0;
+}
+.menuHolder ul li {
+    border-radius:0 0 300px 0;
+    width:0;
+    height:0;
+}
 .menuHolder ul li a {
     color:#000; text-decoration:none;
     font:500 13px/30px arial, sans-serif;
@@ -62,7 +74,11 @@ html,body{
     -o-transform-origin:0 0;
     transform-origin:0 0;
 }
-.menuHolder ul.p1 li {position:absolute; left:0; top:0;}
+.menuHolder ul.p1 li {
+    position:absolute;
+    left:0;
+    top:0;
+}
 .menuHolder ul.p2 {z-index:-1;}
 .menuHolder ul.p3 {z-index:-1;}
 .menuHolder li.s1 > a {
@@ -70,10 +86,11 @@ html,body{
     display:block;
     width:59px;
     height:59px;
-    background:#c8c8c8;
     background: url("../images/caidanshan.png") no-repeat center;
     background-size: 200% 200%;
     border-radius:0 0 100px 0;
+    border: 1px solid rgba(200,200,200,0.7);
+    transform: translate(-1px,-1px);
 }
 .menuHolder li.s1 > a > img {
     width: 50%;
@@ -85,9 +102,10 @@ html,body{
     width:100px;
     padding-left:100px;
     height:200px;
-    background:#323e73;
+    /*background:#323e73;*/
+    /*background: #15204b;*/
+    background: rgba(21,32,75,0.5);
     border-radius:0 0 200px 0;
-    opacity: 0.9;
     color: #fff;
     border: 1px solid rgba(200,200,200,0.7);
 }
@@ -118,7 +136,7 @@ html,body{
 }
 .menuHolder li.s2:nth-of-type(6) > a {
    /* background:#323e73;*/
-    background: rgba(50,62,115,0.1);
+    background: rgba(21,32,75,1);
     -webkit-transform:rotate(75deg);
     -moz-transform:rotateZ(75deg);
     -ms-transform:rotate(75deg);
@@ -126,8 +144,7 @@ html,body{
     transform:rotate(75deg);
 }
 .menuHolder li.s2:nth-of-type(5) > a {
-    background:#323e73;
-    opacity: 0.8;
+    background: rgba(21,32,75,0.5);
     -webkit-transform:rotate(60deg);
     -moz-transform:rotateZ(60deg);
     -ms-transform:rotate(60deg);
@@ -135,8 +152,7 @@ html,body{
     transform:rotate(60deg);
 }
 .menuHolder li.s2:nth-of-type(4) > a {
-    background:#323e73;
-    opacity: 0.7;
+    background: rgba(21,32,75,0.5);
     -webkit-transform:rotate(45deg);
     -moz-transform:rotateZ(45deg);
     -ms-transform:rotate(45deg);
@@ -144,8 +160,7 @@ html,body{
     transform:rotate(45deg);
 }
 .menuHolder li.s2:nth-of-type(3) > a {
-    background:#323e73;
-    opacity: 0.6;
+    background: rgba(21,32,75,0.5);
     -webkit-transform:rotate(30deg);
     -moz-transform:rotateZ(30deg);
     -ms-transform:rotate(30deg);
@@ -153,19 +168,17 @@ html,body{
     transform:rotate(30deg);
 }
 .menuHolder li.s2:nth-of-type(2) > a {
-    background:#323e73;
+    background: rgba(21,32,75,0.5);
     -webkit-transform:rotate(15deg);
     -moz-transform:rotateZ(15deg);
     -ms-transform:rotate(15deg);
     -o-transform:rotate(15deg);
     transform:rotate(15deg);
 }
-.menuHolder li.s2:nth-of-type(2){
-    opacity: 0.5;
-    background: #f00;
-}
 
-.menuHolder .a6 li:nth-of-type(6) > a {background:#444;
+
+.menuHolder .a6 li:nth-of-type(6) > a {
+    background:#444;
     -webkit-transform:rotate(75deg);
     -moz-transform:rotateZ(75deg);
     -ms-transform:rotate(75deg);
@@ -259,9 +272,14 @@ html,body{
     -o-transform:rotate(0deg);
     transform:rotate(0deg);
 }
-.menuHolder ul li:hover > a { color:#fff;}
-/*.menuHolder li.s2:hover > a {background:#d00; color:#fff;}
-.menuHolder .a6 li:hover > a {background:#b00; color:#fff;}
+.menuHolder ul li:hover > a {
+    color:#fff;
+}
+.menuHolder li.s2:hover > a {
+    background:#b5b6ba;
+    color:#000;
+}
+/*.menuHolder .a6 li:hover > a {background:#b00; color:#fff;}
 .menuHolder .a5 li:hover > a {background:#b00; color:#fff;}
 .menuHolder .a3 li:hover > a {background:#b00; color:#fff;}*/
 
@@ -274,7 +292,8 @@ html,body{
     -o-transition:0s 1s;
     transition:0s 1s;
 }
-.menuHolder:hover .menuWindow {width:310px; height:310px;
+.menuHolder:hover .menuWindow {
+    width:310px; height:310px;
     -webkit-transition:0s 0s;
     -moz-transition:0s 0s;
     -ms-transition:0s 0s;
