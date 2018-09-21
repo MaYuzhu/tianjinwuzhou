@@ -6,6 +6,10 @@
         ,range: '~'
         ,format: 'M/d/H:m'
     });
+    //出厂时间
+    laydate.render({
+        elem: '#chuchang_time'
+    })
     //翻页三角
     $('footer').on('click',function (ev) {
         var $target = $(ev.target);

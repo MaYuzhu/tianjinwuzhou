@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="_line"></div>
-            <table>
+            <table class="table1" style="display: none">
                 <tr>
                     <th>序号</th>
                     <th>围栏编号</th>
@@ -151,13 +151,73 @@
                     </td>
                 </tr>
             </table>
+            <div class="add_1">
+                <div class="add_left">
+                    <div class="step">
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>添加围栏</p>
+                            <p>填写围栏的时间</p>
+                        </li>
+                        <li>
+                            <p>绘制围栏</p>
+                            <p>绘制围栏区域</p>
+                        </li>
+                        <li>
+                            <p>添加车辆</p>
+                            <p>选择可分配任务的车辆</p>
+                        </li>
+                        <li>
+                            <p>完成</p>
+                            <p>完成任务下达</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add_right">
+                    <div>
+                        <span>围栏编号</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>围栏名称</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>起始时间</span>
+                        <input type="text" id="add_right_start">
+                    </div>
+                    <div>
+                        <span>结束时间</span>
+                        <input type="text" id="add_right_end">
+                    </div>
+                    <div>
+                        <span>有效性</span>
+                        <input type="text" >
+                    </div>
+                    <div>
+                        <span>备注</span>
+                        <textarea name="" id="add_right_beizhu" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <p>取  消</p>
+                        <p>保存并继续</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
             <div></div>
             <div class="on4"></div>
         </footer>
         <!--添加车辆弹窗-->
-        <div class="tip_add_truck show">
+        <div class="tip_add_truck show" style="display: none">
             <p>增加车辆</p>
             <div>
                 <span>车辆牌照</span>
@@ -165,7 +225,12 @@
             </div>
             <div>
                 <span>单位部门</span>
-                <input type="text">
+                <select name="" id="select1">
+                    <option value="">请选择</option>
+                    <option value="">A部门</option>
+                    <option value="">B部门</option>
+                    <option value="">C部门</option>
+                </select>
             </div>
             <div>
                 <span>联系人</span>
@@ -177,9 +242,22 @@
             </div>
             <div>
                 <span>出厂时间</span>
-                <input type="text">
+                <input type="text" id="chuchang_time">
             </div>
-
+            <div>
+                <span>油耗</span>
+                <input style="width: 50px" type="text">ML
+                <span class="zhuncheng">准乘人数</span>
+                <input style="width: 34px"type="text">人
+            </div>
+            <div class="beizhu">
+                <span>备注</span>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <p>取  消</p>
+                <p>提  交</p>
+            </div>
         </div>
     </div>
 </body>
