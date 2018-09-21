@@ -26,7 +26,7 @@
                                 </li>
                                 <li class="s2"><a href="javascript:;"><span>行驶轨道 &gt;</span></a>
                                 </li>
-                                <li class="s2"><a href="javascript:;"><span>电子围栏 &gt;</span></a>
+                                <li class="s2"><a href="./fence.html" target= _blank><span>电子围栏 &gt;</span></a>
                                 </li>
                                 <li class="s2"><a href="javascript:;"><span>报表分析 &gt;</span></a>
                                 </li>
@@ -38,21 +38,109 @@
                 </div>
             </div>
         </div>
-    </div>
-    <canvas id="mc" width="300" height="200">
-    </canvas>
+        <div class="avatar">
+            <img src="./images/user.png" alt="">
+        </div>
+        <div class="right">
+            <div class="right_content">
+                <div>
+                    <p class="on">在线监控
+                        <img src="./images/titlebg.png" alt="">
+                        <span class="sanjiao"></span>
+                    </p>
+                    <p>轨迹查询
+                        <img src="./images/titlebg.png" alt="">
+                        <span class="sanjiao"></span>
+                    </p>
+                </div>
+                <img src="./images/line1.png" alt="">
+                <div class="box_right">
+                    <div class="zaixian">
+                        <div>
+                            <p>车辆列表</p>
+                            <p>电子围栏</p>
+                        </div>
+                        <select name="" id="">
+                            <option value="">忙碌</option>
+                            <option value="">空闲</option>
+                            <option value="">离线</option>
+                        </select>
+                        <ul class="list_che">
+                            <!--<li>
+                                <input type="checkbox" value="" class="myCheck">
+                                <label for="myCheck"></label>
+                                <p>拖车A1233451</p>
+                                <div></div>
+                            </li>-->
+                        </ul>
+                        <div class="next_wrap">
+                            <li></li>
+                            <li class="on2"></li>
+                        </div>
+                        <div class="button_gen">跟&nbsp;&nbsp;&nbsp;&nbsp;踪</div>
+                    </div>
+                    <div class="guiji" style="display: none">
+                        <div>
+                            <p>车辆选择</p>
+                            <p>电子围栏</p>
+                        </div>
+                        <select name="" id="a2">
+                            <option value="">XXX部门</option>
+                            <option value="">123</option>
+                            <option value="">456</option>
+                        </select>
+                        <ul class="list_che2">
+                            <!--<li>
+                                <input type="checkbox" value="" class="myCheck">
+                                <label for="myCheck"></label>
+                                <p>拖车A1233451</p>
+                                <div></div>
+                            </li>-->
+                        </ul>
+                        <div class="next_wrap3">
+                            <li></li>
+                            <li class="on3"></li>
+                        </div>
+                        <p class="time_select">时间选择</p>
+                        <div class="one_guiji">
+                            <input type="text" id="one_guiji" placeholder="请选择时间范围">
+                            <label for="one_guiji"></label>
+                        </div>
+                        <div class="button_gui">
+                            <div class="button_dao">导&nbsp;&nbsp;&nbsp;&nbsp;出</div>
+                            <div class="button_cha">查&nbsp;&nbsp;&nbsp;&nbsp;询</div>
+                        </div>
+                        <p class="time_select">模拟轨迹</p>
+                        <div class="play">
+                            <div>
+                                <span>00:00</span>
+                                <div>
+                                    <img src="./images/jindu.gif" alt="">
+                                </div>
+                                <span>04:20</span>
+                            </div>
+                            <div>
+                                <div class="play_before">
+                                    <div id="play_1"><span></span><span></span></div>
+                                    <div id="play_2"><span></span></div>
+                                    <div id="play_3"><span></span><span></span></div>
+                                </div>
+                                <div class="play_after">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_hide"><span></span></div>
+            </div>
 
+        </div>
+    </div>
 </body>
 <script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/layDate-v5.0.9/laydate/laydate.js"></script>
 <script src="./js/index.js"></script>
-<script>
-    var canvas = document.getElementById("mc");
-    var ctx = canvas.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(100, 100, 50, 0, 2 * Math.PI / 24, false);
-    ctx.lineTo(100, 100);
-    ctx.fillStyle = "rgba(200,0,10,0.5)";
-    ctx.fill();
-    ctx.closePath();
-</script>
+
 </html>

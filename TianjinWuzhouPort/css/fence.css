@@ -1,0 +1,252 @@
+/*电子围栏*/
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.wrap{
+    background-image: -moz-radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
+    background-image: -webkit-radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
+    background-image: -ms-radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    min-height: 600px;
+}
+header{
+    width: 100%;
+    height: 55px;
+    position: relative;
+}
+header>img{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+header>p{
+    position: absolute;
+    top: 22%;
+    left: 41%;
+    z-index: 4;
+}
+header>:nth-child(3){
+    width: 33%;
+    height: 38px;
+    background: url("../images/top3.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 17px;
+    left: 0%;
+    z-index: 1;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+}
+header>:nth-child(4){
+    width: 25%;
+    height: 38px;
+    position: absolute;
+    top: 17px;
+    right:20px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+header>:nth-child(3)>span{
+    color: #ed8914;
+    font-size: 15px;
+    margin-left: 4px;
+}
+header>:nth-child(3)>:nth-child(1){
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/fence/ling.png") no-repeat center;
+    background-size: 18px 18px;
+}
+header>:nth-child(4)>span{
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 20%;
+}
+header>:nth-child(4)>:nth-child(2){
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 30%;
+    background: url("../images/css_sprites.png") no-repeat -46px -7px;
+}
+.content{
+    width: 90%;
+    height: 80%;
+    margin: 2% auto 8px;
+    background: url("../images/dakuang1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.content>.top{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 18px 0;
+    box-sizing: border-box;
+}
+.content>.top>p{
+    width: 100px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    background: url("../images/fence/title_bg2.png") no-repeat center;
+    background-size: 150% 150%;
+    transform: translate(0,7px);
+}
+.content>.top>:nth-child(2){
+    width: 400px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(-10px,0);
+}
+.weilan_add_wrap{
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #151e3e;
+    border: 1px inset rgba(15, 24, 47, 0.87);
+}
+.weilan_add_wrap>input{
+    height: 25px;
+    background: #151e3e;
+    border: 0px;
+    outline:none;
+    padding-left: 10px;
+    color: #ccc;
+}
+.weilan_add_wrap>input::-webkit-input-placeholder {
+    color: #b0b0b0;
+}
+.weilan_add_wrap>label{
+    width: 25px;
+    height: 25px;
+    background: url("../images/css_sprites.png") -8px -6px;
+}
+.cha,.add_wei{
+    width: 90px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    background: url("../images/button.png") center;
+    background-size: 100% 100%;
+    cursor: pointer;
+    color: #ccc;
+}
+.content>._line{
+    width: 96%;
+    height: 2px;
+    background: #303959;
+    margin: 6px auto 0;
+}
+table{
+    width: 98%;
+    margin: 0 auto;
+    color: #ccc;
+    /*table-layout: fixed;*/
+}
+table a{
+    color: #ccc;
+    margin: 0 5px;
+}
+table a:hover{
+    color: #e2e2e2;
+}
+table th{
+    height: 34px;
+}
+table th:first-child,table th:last-child{
+    padding: 0 10px;
+}
+
+table td:nth-child(7){
+    width: 17%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+table td{
+    height: 30px;
+    text-align: center;
+}
+table tr:nth-child(even){
+    background: #3c4b6b;
+}
+footer{
+    width: 90%;
+    height: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+footer div{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+footer div:first-child{
+    background-image: url("../images/css_sprites.png");
+    background-position: -5px -42px;
+}
+footer div:last-child{
+    background-image: url("../images/css_sprites.png");
+    background-position: -23px -42px;
+}
+footer .on4{
+    background-color: #2a2c45;
+}
+/*添加车辆弹窗*/
+.tip_add_truck{
+    width: 302px;
+    height: 366px;
+    background: #2e3854;
+    border: 2px solid #687289;
+    background-size: 100%,100%;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    z-index: 20;
+    box-shadow: 0px 0px 18px 4px #0c0c19;
+    cursor: move;
+}
+.tip_add_truck>p{
+    color: #ccc;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+}
+.tip_add_truck span{
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
