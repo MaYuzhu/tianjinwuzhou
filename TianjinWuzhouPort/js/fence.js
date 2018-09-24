@@ -10,6 +10,14 @@
     laydate.render({
         elem: '#chuchang_time'
     })
+    //起始时间
+    laydate.render({
+    elem: '#add_right_start'
+    });
+    laydate.render({
+    elem: '#add_right_end'
+    });
+
     //翻页三角
     $('footer').on('click',function (ev) {
         var $target = $(ev.target);

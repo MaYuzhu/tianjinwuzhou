@@ -82,13 +82,15 @@ header>:nth-child(4)>:nth-child(2){
     margin: 2% auto 8px;
     background: url("../images/dakuang1.png") no-repeat center;
     background-size: 100% 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
 }
 .content>.top{
     width: 100%;
     height: 56px;
     display: flex;
     justify-content: space-between;
-    padding: 22px 18px 0;
+    padding: 22px 0 0 18px;
     box-sizing: border-box;
 }
 .content>.top>p{
@@ -109,10 +111,9 @@ header>:nth-child(4)>:nth-child(2){
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: translate(-10px,0);
 }
 .weilan_add_wrap{
-    width: 180px;
+    width: 188px;
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -439,6 +440,125 @@ footer .on4{
     color: #ccc;
     margin-left: 44px;
 }
+/*绘制围栏*/
+.add_right_2{
+    width: 80%;
+}
+.add_right_2>:nth-child(1){
+    display: flex;
+    justify-content: flex-start;
+}
+.add_right_2_left{
+    width: 24%;
+    height: 80%;
+}
+.add_right_2_right{
+    width: 76%;
+    height: 80%;
+    margin-top: 20px;
+}
+.add_right_2_right>img{
+    width: 100%;
+}
+.add_right_2_left>p{
+    color: #eee;
+    font-size: 14px;
+    margin: 36px 0 10px 0;
+    font-weight: 600;
+}
+.add_right_2_left label{
+    color: #ccc;
+}
+
+.add_right_2_left>input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #3181bd;
+    text-indent: .15em;
+    line-height: 1;
+    box-sizing: border-box;
+}
+.add_right_2_left>input[type="radio"]:checked + label::before {
+    background-color: #3181bd;
+    background-clip: content-box;
+    padding: .2em;
+    box-sizing: border-box;
+}
+.add_right_2_left>input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.add_right_2_left>div{
+    margin-top: 16px;
+}
+.add_right_2_left>div>p{
+    color: #ccc;
+}
+.add_right_2>:nth-child(2),.add_right_3>:last-child{
+    display: flex;
+    height: 100px;
+    padding-left: 22%;
+    align-items: center;
+}
+.add_right_2>:nth-child(2)>p,.add_right_3>:last-child>p{
+    width: 90px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    background: url(../images/button.png) center;
+    background-size: 100% 100%;
+    cursor: pointer;
+    color: #ccc;
+    margin: 0 20px;
+}
+.add_right_3{
+    width: 100%;
+    background: #071f65;
+    padding: 16px 0 0 28px;
+}
+.add_right_3>:nth-child(1)>span{
+    color: #ccc;
+    font-size: 14px;
+}
+.add_right_3>:nth-child(1)>select {
+    margin-left: 25px;
+    width: 100px;
+    height: 26px;
+    padding-left: 10px;
+    color: #f0f0f0;
+    border: inset 1px #1e2137;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #0e112c url(../images/sanjiaoxia.gif) no-repeat scroll right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
