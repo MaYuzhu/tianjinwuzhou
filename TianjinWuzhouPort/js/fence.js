@@ -26,6 +26,28 @@
             $target.addClass("on4");
         }
     })
+    //翻页三角2
+    $('.add3_next').on('click',function (ev) {
+        var $target = $(ev.target);
+        if($target.prop("nodeName") == "DIV"){
+            $('.add3_next>div').removeClass('on5')
+            $target.addClass("on5");
+        }
+    })
+    //添加围栏>添加车辆表格
+    for(let i=0;i<8;i++){
+        $('.table2').append(`<tr>
+                            <td><input id="table2_${i}" type="checkbox"><label for="table2_${i}"></label></td>
+                            <td>1</td>
+                            <td>拖车A13451</td>
+                            <td>空闲</td>
+                            <td>XXX</td>
+                            <td>李XX</td>
+                            <td>13145613214</td>
+                        </tr>`)
+    }
+
+
     //拖动
     $(".show").mousedown(function(e){ //e鼠标事件
         $(this).css("cursor","move");//改变鼠标指针的形状
@@ -51,10 +73,11 @@
             $(".show").animate({left:_x+"px",top:_y+"px"},5);
         });
     });
-
     $(document).mouseup(function(){
         //$(".show").css("cursor","default");
         $(".show").css("cursor","move");
         $(this).unbind("mousemove");
     });
+
+
 })(window)

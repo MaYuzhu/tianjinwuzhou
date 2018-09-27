@@ -9,7 +9,7 @@
         })
     );
     //js添加拖车li
-    for(let i=0;i<12;i++){
+    for(var i=0;i<12;i++){
         $('.list_che').append(`<li>
                                 <input type="checkbox" value="" id="myCheck+${i}" class="myCheck">
                                 <label for="myCheck+${i}"></label>

@@ -7,6 +7,7 @@ html,body{
     background-image: -moz-radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
     background-image: -webkit-radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
     background-image: -ms-radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
+    background-image: radial-gradient( 50% 50%, rgb(84,114,170) 0%, rgb(12,14,41) 100%);
     width: 100%;
     height: 100%;
     min-width: 1000px;
@@ -77,7 +78,8 @@ header>:nth-child(4)>:nth-child(2){
     background: url("../images/css_sprites.png") no-repeat -46px -7px;
 }
 .content{
-    width: 90%;
+   /* width: 90%;*/
+    width: 1000px;
     height: 80%;
     margin: 2% auto 8px;
     background: url("../images/dakuang1.png") no-repeat center;
@@ -98,12 +100,13 @@ header>:nth-child(4)>:nth-child(2){
     height: 34px;
     text-align: center;
     line-height: 34px;
-    color: #ccc;
+    color: #eee;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     background: url("../images/fence/title_bg2.png") no-repeat center;
-    background-size: 150% 150%;
+    background-size: 130% 130%;
     transform: translate(0,7px);
+    font-family: "Microsoft YaHei";
 }
 .content>.top>:nth-child(2){
     width: 400px;
@@ -150,10 +153,10 @@ header>:nth-child(4)>:nth-child(2){
     color: #ccc;
 }
 .content>._line{
-    width: 96%;
+    width: 100%;
     height: 2px;
     background: #303959;
-    margin: 6px auto 0;
+    margin: 6px 0 0 20px;
 }
 .table1{
     width: 98%;
@@ -441,24 +444,27 @@ footer .on4{
     margin-left: 44px;
 }
 /*绘制围栏*/
-.add_right_2{
+.add_right_2,.add_right_4{
     width: 80%;
 }
-.add_right_2>:nth-child(1){
+.add_right_2>:nth-child(1),.add_right_4>:nth-child(1){
     display: flex;
     justify-content: flex-start;
 }
-.add_right_2_left{
+.add_right_2_left,.add_right_4_left{
     width: 24%;
     height: 80%;
 }
-.add_right_2_right{
+.add_right_2_right,.add_right_4_right{
     width: 76%;
     height: 80%;
+    max-height: 400px;
     margin-top: 20px;
+    overflow: hidden;
 }
-.add_right_2_right>img{
+.add_right_2_right>img,.add_right_4_right>img{
     width: 100%;
+    height: 100%;
 }
 .add_right_2_left>p{
     color: #eee;
@@ -500,13 +506,12 @@ footer .on4{
 .add_right_2_left>div>p{
     color: #ccc;
 }
-.add_right_2>:nth-child(2),.add_right_3>:last-child{
+.add_right_2>:nth-child(2),.add_right_3>:last-child,.add_right_4>:last-child{
     display: flex;
-    height: 100px;
     padding-left: 22%;
     align-items: center;
 }
-.add_right_2>:nth-child(2)>p,.add_right_3>:last-child>p{
+.add_right_2>:nth-child(2)>p,.add_right_3>:last-child>p,.add_right_4>:last-child>p{
     width: 90px;
     height: 32px;
     line-height: 30px;
@@ -521,7 +526,6 @@ footer .on4{
 }
 .add_right_3{
     width: 100%;
-    background: #071f65;
     padding: 16px 0 0 28px;
 }
 .add_right_3>:nth-child(1)>span{
@@ -542,11 +546,79 @@ footer .on4{
     background: #0e112c url(../images/sanjiaoxia.gif) no-repeat scroll right;
 }
 
+.add_right_3 .table2{
+    width: 100%;
+    color: #ccc;
+    margin-top: 10px;
+}
+.add_right_3 .table2 td,.add_right_3 .table2 th{
+    text-align: center;
+    height: 32px;
+}
+.add_right_3 .table2 td>input[type=checkbox] + label{
+    background-color: #181e3c;
+    border-radius: 1px;
+    border: 1px inset #313453;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 14px;
+}
+.add_right_3 .table2 td>input[type=checkbox]:checked + label:after {
+    content: "\2714";
+}
+.add_right_3 .table2 td>input[type=checkbox]{
+    display: none;
+}
+.add_right_3 .table2 tr:nth-child(even){
+    background: rgba(93, 107, 144, 0.79);
+}
+.add_right_3 .table2 tr:nth-child(odd){
+    background: #243054;
+}
+.add3_next{
+    width: 100%;
+    height: 20px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-end;
+}
 
-
-
-
-
+.add3_next div{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.add3_next div:first-child{
+    background-image: url("../images/css_sprites.png");
+    background-position: -5px -42px;
+}
+.add3_next div:last-child{
+    background-image: url("../images/css_sprites.png");
+    background-position: -23px -42px;
+}
+.add3_next .on5{
+    background-color: #545576;
+}
+.add_right_4_left>p{
+    color: #eee;
+    font-size: 14px;
+    margin: 36px 0 10px 0;
+    font-weight: 600;
+}
+.add_right_4_left>div{
+    margin: 18px 10px 10px 0;
+    color: #ccc;
+}
+.add_right_4_left>div>p{
+    margin-top: 5px;
+}
+.add_right_4>:last-child{
+    height: 12%;
+    margin-left: -4%;
+}
 
 
 
