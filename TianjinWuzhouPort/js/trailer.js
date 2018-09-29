@@ -1,28 +1,4 @@
 (function (w) {
-    //table切换
-    let $tab = $('.content_footer_left>li')
-    $tab.on('click',(function() {
-            var i = $(this).index();
-            $(this).addClass('active1').siblings().removeClass('active1');
-            $('.content_footer_right>div').eq(i).show().siblings().hide();
-        })
-    );
-    //翻页三角
-    $('.footer1').on('click',function (ev) {
-        var $target = $(ev.target);
-        if($target.prop("nodeName") == "DIV"){
-            $('.footer1>div').removeClass('on4')
-            $target.addClass("on4");
-        }
-    })
-    $('.footer2').on('click',function (ev) {
-        var $target = $(ev.target);
-        if($target.prop("nodeName") == "DIV"){
-            $('.footer2>div').removeClass('on5')
-            $target.addClass("on5");
-        }
-    })
-
     //拖动
     $(".show").mousedown(function(e){ //e鼠标事件
         $(this).css("cursor","move");//改变鼠标指针的形状
@@ -53,17 +29,24 @@
         $(".show").css("cursor","move");
         $(this).unbind("mousemove");
     });
-
-    //添加子账户按钮
-    var $_addUser = $('.content_footer_right3_top>:nth-child(3)')
-    $_addUser.on('click',function () {
-        $(".show").css('display','block')
+    //添加按钮
+    $('.cha').on('click',function () {
+        $('.show').css('display','block')
     })
-    $('.adduser_quxiao').on('click',function () {
-        $(".show").css('display','none')
+    //取消
+    $('.add_car_quxiao').on('click',function () {
+        $('.show').css('display','none')
     })
-    
-    $('.psd_quxiao').on('click',function () {
-        $('.update_psd input').val('')
+    //出厂时间
+    laydate.render({
+        elem: '#chuchang_time'
+    })
+    //翻页三角
+    $('footer').on('click',function (ev) {
+        var $target = $(ev.target);
+        if($target.prop("nodeName") == "DIV"){
+            $('footer>div').removeClass('trailer_on')
+            $target.addClass("trailer_on");
+        }
     })
 })(window)

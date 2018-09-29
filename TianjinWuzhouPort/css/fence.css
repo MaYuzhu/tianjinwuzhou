@@ -76,9 +76,10 @@ header>:nth-child(4)>:nth-child(2){
     height: 20px;
     margin-left: 30%;
     background: url("../images/css_sprites.png") no-repeat -46px -7px;
+    cursor: pointer;
 }
 .content{
-   /* width: 90%;*/
+    /*width: 90%;*/
     width: 1000px;
     height: 80%;
     margin: 2% auto 8px;
@@ -121,12 +122,12 @@ header>:nth-child(4)>:nth-child(2){
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #151e3e;
-    border: 1px inset rgba(15, 24, 47, 0.87);
+    background: #15152b;
+    border: 1px inset rgba(15, 24, 47, 0.80);
 }
 .weilan_add_wrap>input{
     height: 25px;
-    background: #151e3e;
+    background: #15152b;
     border: 0px;
     outline:none;
     padding-left: 10px;
@@ -150,7 +151,7 @@ header>:nth-child(4)>:nth-child(2){
     background: url("../images/button.png") center;
     background-size: 100% 100%;
     cursor: pointer;
-    color: #ccc;
+    color: #eee;
 }
 .content>._line{
     width: 100%;
@@ -159,11 +160,13 @@ header>:nth-child(4)>:nth-child(2){
     margin: 6px 0 0 20px;
 }
 .table1{
-    width: 98%;
+    width: 980px;
     margin: 0 auto;
     color: #ccc;
+    transform: translate(10px,0);
     /*table-layout: fixed;*/
 }
+
 .table1 a{
     color: #ccc;
     margin: 0 5px;
@@ -193,7 +196,7 @@ header>:nth-child(4)>:nth-child(2){
     background: rgba(93, 107, 144, 0.79);
 }
 footer{
-    width: 90%;
+    width: 1000px;
     height: 20px;
     margin: 0 auto;
     display: flex;
@@ -215,107 +218,7 @@ footer div:last-child{
 footer .on4{
     background-color: #2a2c45;
 }
-/*添加车辆弹窗*/
-.tip_add_truck{
-    width: 302px;
-    height: 366px;
-    background: #2e3854;
-    border: 2px solid #687289;
-    background-size: 100%,100%;
-    position: absolute;
-    top:20%;
-    left: 50%;
-    z-index: 20;
-    box-shadow: 0px 0px 18px 4px #0c0c19;
-    cursor: move;
-    color: #999;
-}
-.tip_add_truck>p{
-    color: #ccc;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    height: 36px;
-    line-height: 36px;
-}
-.tip_add_truck span{
-    color: #ccc;
-}
 
-.tip_add_truck>div{
-    display: flex;
-    align-items: center;
-    padding:  6px 0px 0px 20px;
-}
-.tip_add_truck>div:first-of-type{
-    padding-top: 0;
-}
-.tip_add_truck>div>span{
-    display: block;
-    width: 50px;
-    text-align: right;
-    font-size: 12px;
-    font-weight: 600;
-}
-.tip_add_truck>div>input{
-    width: 182px;
-    height: 24px;
-    background: #202642;
-    border: 1px inset rgba(49, 71, 116, 0.8);
-    border-radius: 3px;
-    margin-left: 6px;
-    color: #ccc;
-}
-#select1{
-    width: 184px;
-    height: 26px;
-    background: #202642;
-    border: 1px inset rgba(49, 71, 116, 0.8);
-    border-radius: 3px;
-    margin-left: 6px;
-    color: #aaa;
-    padding-left: 4px;
-    outline: none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    appearance:none;
-    background: #202642 url("../images/sanjiaoxia.gif") no-repeat scroll center;
-    background-position: 159px 0px;
-}
-.tip_add_truck>div .zhuncheng{
-    margin-left: 23px;
-}
-.tip_add_truck>.beizhu{
-    align-items: start;
-}
-.tip_add_truck>.beizhu textarea{
-    width: 182px;
-    height: 70px;
-    background: #202642;
-    border: 1px inset rgba(49, 71, 116, 0.8);
-    margin-left: 6px;
-    color: #ccc;
-}
-.tip_add_truck>:last-child{
-    width: 204px;
-    height: 30px;
-    margin: 15px auto;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-.tip_add_truck>:last-child>p{
-    width: 90px;
-    height: 30px;
-    line-height: 28px;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    background: url("../images/button.png") center;
-    background-size: 100% 100%;
-    cursor: pointer;
-    color: #ccc;
-}
 /*添加围栏 按钮点击后的步骤*/
 .content .add_1{
     width: 100%;
@@ -343,7 +246,8 @@ footer .on4{
     border-radius: 1px;
     margin: 30px 0 0 20px;
 }
-.add_left>.step>:nth-child(1)>span{
+
+.step>:nth-child(1)>span{
     display: block;
     width: 14px;
     height: 14px;
@@ -355,6 +259,9 @@ footer .on4{
     box-shadow: 0px 0px 4px 1px rgb( 25, 36, 70);
     transform: translate(-6px);
     margin: 10px 0 60px 0;
+}
+.add_left>.step .active{
+    background :radial-gradient( 50% 50%, rgb(220, 220, 220) 40%, rgb(70, 70, 70) 100%);
 }
 .add_left>ul{
     height: 312px;
@@ -473,7 +380,8 @@ footer .on4{
     font-weight: 600;
 }
 .add_right_2_left label{
-    color: #ccc;
+    color: #eee;
+    cursor: pointer;
 }
 
 .add_right_2_left>input[type="radio"] + label::before {
@@ -489,6 +397,7 @@ footer .on4{
     text-indent: .15em;
     line-height: 1;
     box-sizing: border-box;
+    margin-top: -2px;
 }
 .add_right_2_left>input[type="radio"]:checked + label::before {
     background-color: #3181bd;
@@ -510,6 +419,7 @@ footer .on4{
     display: flex;
     padding-left: 22%;
     align-items: center;
+    margin-top: 20px;
 }
 .add_right_2>:nth-child(2)>p,.add_right_3>:last-child>p,.add_right_4>:last-child>p{
     width: 90px;

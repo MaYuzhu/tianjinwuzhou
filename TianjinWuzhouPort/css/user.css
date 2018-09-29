@@ -190,6 +190,38 @@ footer div:last-child{
 .content_footer_right3 table a{
     color: #508ec6;
 }
+/*资料重设*/
+.content_footer_right2>div{
+    width: 290px;
+    height: 130px;
+    margin: 30px;
+}
+.content_footer_right2>:nth-child(1)>div{
+    height: 30px;
+    font-size: 14px;
+    color: #eee;
+}
+.content_footer_right2>:nth-child(2)>p{
+    height: 30px;
+    font-size: 15px;
+    color: #dcdcdc;
+}
+.content_footer_right2>:nth-child(2)>div{
+    height: 30px;
+    font-size: 14px;
+    color: #eee;
+}
+.content_footer_right2>:nth-child(2)>div>span{
+    display: inline-block;
+    width: 72px;
+    text-align: right;
+}
+.content_footer_right2>:nth-child(2)>:last-child{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
 /*添加子账户*/
 .tip_add_user{
     width: 336px;
@@ -204,6 +236,7 @@ footer div:last-child{
     box-shadow: 0px 0px 18px 4px #0c0c19;
     cursor: move;
     color: #eee;
+    display: none;
 }
 .tip_add_user>p{
     text-align: center;
@@ -211,6 +244,7 @@ footer div:last-child{
     font-weight: 600;
     height: 36px;
     line-height: 36px;
+    margin-top: 15px;
 }
 .tip_add_user>div{
     width: 260px;
@@ -249,7 +283,7 @@ footer div:last-child{
     padding: .2em;
     box-sizing: border-box;
 }
-.tip_add_user>div>input{
+.tip_add_user>div>input,.content_footer_right2 input{
     width: 182px;
     height: 24px;
     background: #202642;
@@ -262,12 +296,12 @@ footer div:last-child{
 .tip_add_user>:last-child{
     width: 204px;
     height: 30px;
-    margin: 110px auto 0;
+    margin: 88px auto 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
 }
-.tip_add_user>:last-child>p{
+.tip_add_user>:last-child>p,.content_footer_right2>:nth-child(2)>:last-child>p{
     width: 90px;
     height: 30px;
     line-height: 28px;

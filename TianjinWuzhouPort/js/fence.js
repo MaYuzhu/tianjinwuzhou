@@ -6,10 +6,7 @@
         ,range: '~'
         ,format: 'M/d/H:m'
     });
-    //出厂时间
-    laydate.render({
-        elem: '#chuchang_time'
-    })
+
     //起始时间
     laydate.render({
     elem: '#add_right_start'
@@ -47,7 +44,130 @@
                         </tr>`)
     }
 
-
+    var flag = true
+    //添加围栏按钮
+    $('.add_wei').on('click',function () {
+        if(flag){
+            $('.table1').css('display','none')
+            $('.add_1').css('display','flex')
+            $('.add_right').css('display','block')
+            if($('.add_right').css('display')!=='none'){
+                $('.step span:nth-child(1)').addClass('active')
+            }
+        }
+        flag = false
+    })
+    //取消1
+    $('.add_right1_quxiao').on('click',function () {
+        $('.table1').css('display','table')
+        $('.add_1').css('display','none')
+        $('.add_right_2').css('display','none')
+        $('.add_right_3').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.step span').removeClass('active')
+        flag = true
+    })
+    //保存并继续1
+    $('.add_right1_next').on('click',function () {
+        $('.add_right').css('display','none')
+        $('.add_right_2').css('display','block')
+        $('.add_right_4').css('display','none')
+        $('.add_right_3').css('display','none')
+        if($('.add_right_2').css('display')!=='none'){
+            $('.step span').removeClass('active')
+            $('.step span:nth-child(2)').addClass('active')
+        }
+    })
+    //取消2
+    $('.add_right_2_quxiao').on('click',function () {
+        $('.table1').css('display','table')
+        $('.add_1').css('display','none')
+        $('.add_right_2').css('display','none')
+        $('.add_right_3').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.step span').removeClass('active')
+        flag = true
+    })
+    //上一步2
+    $('.add_right_2_prev').on('click',function () {
+        $('.add_right_2').css('display','none')
+        $('.add_right_3').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.add_right').css('display','block')
+        $('.step span').removeClass('active')
+        $('.step span:nth-child(1)').addClass('active')
+    })
+    //保存继续2
+    $('.add_right_2_next').on('click',function () {
+        $('.add_right_2').css('display','none')
+        $('.add_right').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.add_right_3').css('display','block')
+        if($('.add_right_3').css('display')!=='none'){
+            $('.step span').removeClass('active')
+            $('.step span:nth-child(3)').addClass('active')
+        }
+    })
+    //取消3
+    $('.add_right_3_quxiao').on('click',function () {
+        $('.table1').css('display','table')
+        $('.add_1').css('display','none')
+        $('.add_right_2').css('display','none')
+        $('.add_right_3').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.step span').removeClass('active')
+        flag = true
+    })
+    //上一步3
+    $('.add_right_3_prev').on('click',function () {
+        $('.add_right_2').css('display','block')
+        $('.add_right_3').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.add_right').css('display','none')
+        $('.step span').removeClass('active')
+        $('.step span:nth-child(2)').addClass('active')
+    })
+    //保存继续3
+    $('.add_right_3_next').on('click',function () {
+        $('.add_right_2').css('display','none')
+        $('.add_right').css('display','none')
+        $('.add_right_4').css('display','block')
+        $('.add_right_3').css('display','none')
+        if($('.add_right_4').css('display')!=='none'){
+            $('.step span').removeClass('active')
+            $('.step span:nth-child(4)').addClass('active')
+        }
+    })
+    //取消4
+    $('.add_right_4_quxiao').on('click',function () {
+        $('.table1').css('display','table')
+        $('.add_1').css('display','none')
+        $('.add_right_2').css('display','none')
+        $('.add_right_3').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.step span').removeClass('active')
+        flag = true
+    })
+    //上一步4
+    $('.add_right_4_prev').on('click',function () {
+        $('.add_right_2').css('display','none')
+        $('.add_right_3').css('display','block')
+        $('.add_right_4').css('display','none')
+        $('.add_right').css('display','none')
+        $('.step span').removeClass('active')
+        $('.step span:nth-child(3)').addClass('active')
+    })
+    //保存继续4
+    $('.add_right_4_next').on('click',function () {
+        $('.table1').css('display','table')
+        $('.add_1').css('display','none')
+        $('.add_right_2').css('display','none')
+        $('.add_right').css('display','none')
+        $('.add_right_4').css('display','none')
+        $('.add_right_3').css('display','none')
+        $('.step span').removeClass('active')
+        flag = true
+    })
     //拖动
     $(".show").mousedown(function(e){ //e鼠标事件
         $(this).css("cursor","move");//改变鼠标指针的形状

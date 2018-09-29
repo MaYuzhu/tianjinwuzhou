@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="_line"></div>
-            <table class="table1" style="display: none">
+            <table class="table1" style="display: table">
                 <tr>
                     <th>序号</th>
                     <th>围栏编号</th>
@@ -151,7 +151,7 @@
                     </td>
                 </tr>
             </table>
-            <div class="add_1">
+            <div class="add_1" style="display: none">
                 <div class="add_left">
                     <div class="step">
                         <div>
@@ -206,8 +206,8 @@
                         <textarea name="" id="add_right_beizhu" cols="30" rows="10"></textarea>
                     </div>
                     <div>
-                        <p>取  消</p>
-                        <p>保存并继续</p>
+                        <p class="add_right1_quxiao">取  消</p>
+                        <p class="add_right1_next">保存并继续</p>
                     </div>
                 </div>
                 <div class="add_right_2" style="display: none">
@@ -230,9 +230,9 @@
                         </div>
                     </div>
                     <div>
-                        <p>取 消</p>
-                        <p>上 一 步</p>
-                        <p>保存并继续</p>
+                        <p class="add_right_2_quxiao">取 消</p>
+                        <p class="add_right_2_prev">上 一 步</p>
+                        <p class="add_right_2_next">保存并继续</p>
                     </div>
                 </div>
                 <div class="add_right_3" style="display: none">
@@ -269,12 +269,12 @@
                         <div class="on5"></div>
                     </div>
                     <div>
-                        <p>取 消</p>
-                        <p>上 一 步</p>
-                        <p>保存并继续</p>
+                        <p class="add_right_3_quxiao">取 消</p>
+                        <p class="add_right_3_prev">上 一 步</p>
+                        <p class="add_right_3_next">保存并继续</p>
                     </div>
                 </div>
-                <div class="add_right_4">
+                <div class="add_right_4" style="display: none">
                     <div>
                         <div class="add_right_4_left">
                             <p>手动绘制</p>
@@ -301,9 +301,9 @@
                         </div>
                     </div>
                     <div>
-                        <p>取 消</p>
-                        <p>上 一 步</p>
-                        <p>保 存</p>
+                        <p class="add_right_4_quxiao">取 消</p>
+                        <p class="add_right_4_prev">上 一 步</p>
+                        <p class="add_right_4_next">保 存</p>
                     </div>
                 </div>
             </div>
@@ -313,49 +313,7 @@
             <div></div>
             <div class="on4"></div>
         </footer>
-        <!--添加车辆弹窗-->
-        <div class="tip_add_truck show" style="display: none">
-            <p>增加车辆</p>
-            <div>
-                <span>车辆牌照</span>
-                <input type="text">
-            </div>
-            <div>
-                <span>单位部门</span>
-                <select name="" id="select1">
-                    <option value="">请选择</option>
-                    <option value="">A部门</option>
-                    <option value="">B部门</option>
-                    <option value="">C部门</option>
-                </select>
-            </div>
-            <div>
-                <span>联系人</span>
-                <input type="text">
-            </div>
-            <div>
-                <span>联系方式</span>
-                <input type="text">
-            </div>
-            <div>
-                <span>出厂时间</span>
-                <input type="text" id="chuchang_time">
-            </div>
-            <div>
-                <span>油耗</span>
-                <input style="width: 50px" type="text">ML
-                <span class="zhuncheng">准乘人数</span>
-                <input style="width: 34px"type="text">人
-            </div>
-            <div class="beizhu">
-                <span>备注</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-                <p>取  消</p>
-                <p>提  交</p>
-            </div>
-        </div>
+
     </div>
 </body>
 <script src="./js/jquery-1.11.3.min.js"></script>
