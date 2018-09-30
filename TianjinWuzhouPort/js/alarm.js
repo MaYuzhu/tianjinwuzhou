@@ -7,9 +7,16 @@
             $target.addClass("alarm_on");
         }
     })
+
+    laydate.render({
+        elem: '#alarm_time'
+    });
+    laydate.render({
+        elem: '#chuli_time'
+    });
     //编辑弹窗
 
-    for(var i=1;i<12;i++){
+    for(let i=1;i<12;i++){
         $('.table1').append(`<tr>
                     <td>${i}</td>
                     <td>苏${i}E367287</td>
@@ -24,11 +31,29 @@
                 </tr>`)
     }
 
-    $('.table1 a').on('click',function () {
+    /*$('.table1 a').on('click',function () {
         $('.show').css('display','block')
-
-    })
+    })*/
     $('.alarm_quxiao').on('click',function () {
+        $('.show').css('display','none')
+    })
+
+    //提交
+    $('.add_car_tijiao').on('click',function () {
+        var i = tr_index
+        var alarm_car = $('.tip_add_truck .alarm_car').val()
+        var alarm_time = $('.tip_add_truck #alarm_time').val()
+        var alarm_reason = $('.tip_add_truck .alarm_reason').val()
+        var chuli_time = $('.tip_add_truck #chuli_time').val()
+        var alarm_bumen = $('.tip_add_truck .alarm_bumen').val()
+        var alarm_chuzhi = $('.tip_add_truck .alarm_chuzhi').val()
+
+        $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(2)`).text(alarm_car)
+        $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(4)`).text(alarm_time)
+        $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(5)`).text(alarm_reason)
+        $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(7)`).text(chuli_time)
+        $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(3)`).text(alarm_bumen)
+        $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(6)`).text(alarm_chuzhi)
         $('.show').css('display','none')
     })
     //拖动
@@ -61,19 +86,25 @@
         $(".show").css("cursor","move");
         $(this).unbind("mousemove");
     });
+    $(".show input,.show select,.show textarea").mousedown(function(event){
+        event.stopPropagation();
+    });
 })(window)
+var tr_index = 0
 function _alarm(i) {
+    $('.show').css('display','block')
     var alarm_car = $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(2)`).text()
     var alarm_time = $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(4)`).text()
     var alarm_reason = $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(5)`).text()
     var chuli_time = $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(7)`).text()
     var alarm_bumen = $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(3)`).text()
     var alarm_chuzhi = $(`.table1>:nth-child(1)>:nth-child(${i+1})>:nth-child(6)`).text()
-    console.log(alarm_bumen)
+    //console.log(alarm_bumen)
     $('.tip_add_truck .alarm_car').val(alarm_car)
     $('.tip_add_truck #alarm_time').val(alarm_time)
     $('.tip_add_truck .alarm_reason').val(alarm_reason)
     $('.tip_add_truck #chuli_time').val(chuli_time)
     $('.tip_add_truck .alarm_bumen').val('1')
     $('.tip_add_truck .alarm_chuzhi').val('2')
+    tr_index = i
 }
